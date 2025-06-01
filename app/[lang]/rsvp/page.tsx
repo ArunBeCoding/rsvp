@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { useState } from "react"
+import { useState, useTransition } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -10,8 +10,9 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
-import { Heart } from "lucide-react"
+import { Heart, Loader2 } from "lucide-react"
 import { useParams } from "next/navigation"
+import { submitRSVP, type RSVPFormData } from "./actions"
 
 // Define the dictionary type
 type Dictionary = {
@@ -38,9 +39,11 @@ type Dictionary = {
     message: string
     messagePlaceholder: string
     submit: string
+    submitting: string
     thankYou: string
     thankYouMessage: string
     required: string
+    error: string
   }
 }
 
@@ -70,9 +73,11 @@ const dictionaries: Record<string, Dictionary> = {
       message: "Message for the Couple",
       messagePlaceholder: "Share your well wishes or any special message...",
       submit: "Submit RSVP",
+      submitting: "Submitting...",
       thankYou: "Thank You!",
       thankYouMessage: "Your RSVP has been received. We can't wait to celebrate with you!",
       required: "*",
+      error: "Error",
     },
   },
   ta: {
@@ -99,9 +104,11 @@ const dictionaries: Record<string, Dictionary> = {
       message: "தம்பதியருக்கான செய்தி",
       messagePlaceholder: "உங்கள் நல்வாழ்த்துக்கள் அல்லது சிறப்பு செய்தியைப் பகிரவும்...",
       submit: "பதிலை சமர்பிக்கவும்",
+      submitting: "சமர்பிக்கிறது...",
       thankYou: "நன்றி!",
       thankYouMessage: "உங்கள் பதில் பெறப்பட்டது. உங்களுடன் கொண்டாட காத்திருக்கிறோம்!",
       required: "*",
+      error: "பிழை",
     },
   },
 }
@@ -125,11 +132,35 @@ export default function RSVPPage() {
   })
 
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [isPending, startTransition] = useTransition()
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("RSVP Data:", formData)
-    setSubmitted(true)
+    setError(null)
+
+    const rsvpData: RSVPFormData = {
+      ...formData,
+      attendance: formData.attendance as "yes" | "no",
+      language: lang,
+    }
+
+    startTransition(async () => {
+      try {
+        const result = await submitRSVP(rsvpData)
+        if (result.success) {
+          setSubmitted(true)
+        } else {
+          setError(result.message)
+        }
+      } catch (err) {
+        setError(
+          lang === "ta"
+            ? "பதில் சமர்பிக்கும்போது பிழை ஏற்பட்டது. மீண்டும் முயற்சிக்கவும்."
+            : "There was an error submitting your RSVP. Please try again.",
+        )
+      }
+    })
   }
 
   const handleInputChange = (field: string, value: string | boolean) => {
@@ -167,6 +198,14 @@ export default function RSVPPage() {
               <CardDescription>{dict.rsvp.cardDescription}</CardDescription>
             </CardHeader>
             <CardContent>
+              {error && (
+                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md">
+                  <p className="text-red-800 text-sm">
+                    <strong>{dict.rsvp.error}:</strong> {error}
+                  </p>
+                </div>
+              )}
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
@@ -176,6 +215,7 @@ export default function RSVPPage() {
                     <Input
                       id="firstName"
                       required
+                      disabled={isPending}
                       value={formData.firstName}
                       onChange={(e) => handleInputChange("firstName", e.target.value)}
                     />
@@ -187,6 +227,7 @@ export default function RSVPPage() {
                     <Input
                       id="lastName"
                       required
+                      disabled={isPending}
                       value={formData.lastName}
                       onChange={(e) => handleInputChange("lastName", e.target.value)}
                     />
@@ -202,6 +243,7 @@ export default function RSVPPage() {
                       id="email"
                       type="email"
                       required
+                      disabled={isPending}
                       value={formData.email}
                       onChange={(e) => handleInputChange("email", e.target.value)}
                     />
@@ -211,6 +253,7 @@ export default function RSVPPage() {
                     <Input
                       id="phone"
                       type="tel"
+                      disabled={isPending}
                       value={formData.phone}
                       onChange={(e) => handleInputChange("phone", e.target.value)}
                     />
@@ -224,6 +267,7 @@ export default function RSVPPage() {
                   <RadioGroup
                     value={formData.attendance}
                     onValueChange={(value) => handleInputChange("attendance", value)}
+                    disabled={isPending}
                     required
                   >
                     <div className="flex items-center space-x-2">
@@ -244,6 +288,7 @@ export default function RSVPPage() {
                       <Select
                         value={formData.guestCount}
                         onValueChange={(value) => handleInputChange("guestCount", value)}
+                        disabled={isPending}
                       >
                         <SelectTrigger>
                           <SelectValue />
@@ -262,6 +307,7 @@ export default function RSVPPage() {
                       <Textarea
                         id="dietary"
                         placeholder={dict.rsvp.dietaryPlaceholder}
+                        disabled={isPending}
                         value={formData.dietaryRestrictions}
                         onChange={(e) => handleInputChange("dietaryRestrictions", e.target.value)}
                       />
@@ -272,6 +318,7 @@ export default function RSVPPage() {
                       <Input
                         id="song"
                         placeholder={dict.rsvp.songPlaceholder}
+                        disabled={isPending}
                         value={formData.songRequest}
                         onChange={(e) => handleInputChange("songRequest", e.target.value)}
                       />
@@ -281,6 +328,7 @@ export default function RSVPPage() {
                       <Checkbox
                         id="accommodations"
                         checked={formData.accommodations}
+                        disabled={isPending}
                         onCheckedChange={(checked) => handleInputChange("accommodations", checked as boolean)}
                       />
                       <Label htmlFor="accommodations">{dict.rsvp.accommodations}</Label>
@@ -293,13 +341,21 @@ export default function RSVPPage() {
                   <Textarea
                     id="message"
                     placeholder={dict.rsvp.messagePlaceholder}
+                    disabled={isPending}
                     value={formData.message}
                     onChange={(e) => handleInputChange("message", e.target.value)}
                   />
                 </div>
 
-                <Button type="submit" className="w-full bg-indigo-600 hover:bg-indigo-700">
-                  {dict.rsvp.submit}
+                <Button type="submit" className="w-full bg-indigo-600 hover:bg-indigo-700" disabled={isPending}>
+                  {isPending ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      {dict.rsvp.submitting}
+                    </>
+                  ) : (
+                    dict.rsvp.submit
+                  )}
                 </Button>
               </form>
             </CardContent>
