@@ -24,25 +24,19 @@ export function LanguageSwitcher({ currentLang }: { currentLang: string }) {
   const currentLanguage = languages.find((lang) => lang.code === currentLang) || languages[0]
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="sm" className="gap-2">
-          <Globe className="h-4 w-4" />
-          <span className="hidden sm:inline">{currentLanguage.nativeName}</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        {languages.map((language) => (
-          <DropdownMenuItem
-            key={language.code}
-            onClick={() => switchLanguage(language.code)}
-            className={currentLang === language.code ? "bg-gray-100" : ""}
-          >
-            <span className="font-medium">{language.nativeName}</span>
-            <span className="text-sm text-gray-500 ml-2">({language.name})</span>
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <Button 
+      variant="outline" 
+      size="sm" 
+      className="gap-2 rounded-full w-10 h-10 p-0 flex items-center justify-center bg-purple-800 border-purple-800 text-white"
+      onClick={() => {
+        // Switch to the opposite language
+        const newLang = currentLang === 'en' ? 'ta' : 'en';
+        switchLanguage(newLang);
+      }}
+    >
+      <span className="hidden sm:inline">
+        {currentLang === 'en' ? 'தமிழ்' : 'en'}
+      </span>
+    </Button>
   )
 }
