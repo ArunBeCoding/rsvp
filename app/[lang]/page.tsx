@@ -73,6 +73,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { getDictionary } from "./dictionaries"
 import { Great_Vibes } from 'next/font/google'
+import CountdownTimer from "@/components/countdown"
 
 const elegantFont = Great_Vibes({subsets: ['latin'],weight: '400'})
 
@@ -86,101 +87,102 @@ export default async function HomePage({
 
   return (
     <div className="min-h-screen bg-white">
-      <main className="container mx-auto px-4">
+      <main className="container mx-auto px-4 pb-16">
         {/* Header Section */}
         {/* <div className="text-center mb-12">
-          <h1 className="text-6xl md:text-8xl font-bold text-purple-800 mb-4">
+          <h1 className="text-6xl md:text-8xl font-bold text-[#830065] mb-4">
             {dict.home.title}
           </h1>
-          <p className="text-xl text-purple-700">June 15, 2024</p>
+          <p className="text-xl text-[#830065]">June 15, 2024</p>
         </div> */}
 
         {/* Main Grid with Shared Borders */}
-        <div className="w-[70%] mx-auto border-purple-800 grid grid-cols-1 md:grid-cols-2">
+        <div className="w-[70%] mx-auto border-[#830065] grid grid-cols-1 md:grid-cols-2">
           {/* Large Initials Container */}
-          <div className="p-12 flex items-center justify-center bg-white border-r-2 border-b-2 border-purple-800 md:border-r-4 md:border-b-4">
+          <div className="p-12 flex items-center justify-center bg-white border-r-2 border-b-2 border-[#830065] md:border-r-4 md:border-b-4">
             <div className="text-center">
-              <div className={`text-8xl md:text-9xl mr-40 font-bold text-purple-800 leading-none ${elegantFont.className}`}>
+              <div className={`text-8xl md:text-9xl mr-40 font-bold text-[#830065] leading-none ${elegantFont.className}`}>
                 M
               </div>
-              <div className={`text-6xl md:text-7xl font-bold text-purple-800 leading-none ${elegantFont.className}`}>
+              <div className={`text-6xl md:text-7xl font-bold text-[#830065] leading-none ${elegantFont.className}`}>
                 &
               </div>
-              <div className={`text-8xl md:text-9xl ml-40 font-bold text-purple-800 leading-none ${elegantFont.className}`}>
+              <div className={`text-8xl md:text-9xl ml-40 font-bold text-[#830065] leading-none ${elegantFont.className}`}>
                 A
               </div>
             </div>
           </div>
 
           {/* Photo Placeholder Container */}
-          <div className="p-8 bg-white border-b-2 border-purple-800 md:border-b-4">
+          <div className="p-8 bg-white border-b-2 border-[#830065] md:border-b-4">
             <div className="aspect-square bg-gray-100 rounded-lg flex items-center justify-center">
-              <span className="text-purple-800 text-lg font-medium">
+              <span className="text-[#830065] text-lg font-medium">
                 {dict.home.photoPlaceholder || "Wedding Photo"}
               </span>
             </div>
           </div>
 
           {/* Call to Action Container */}
-          <div className="p-8 bg-white text-center border-r-2 border-b-2 border-purple-800 md:border-r-4 md:border-b-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-purple-800 mb-6 leading-tight">
-              YOU WON'T WANT TO MISS THIS!
+          <div className="p-8 bg-white text-center border-r-2 border-b-2 border-[#830065] md:border-r-4 md:border-b-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#830065] mb-6 leading-tight">
+              {dict.home.missthis}
             </h2>
             <Button 
               asChild 
-              className="hover:bg-purple-800 hover:text-white rounded-none text-purple-800 border-2 ext-purple-800 px-8 py-3 text-lg font-medium border-purple-800"
+              className="hover:bg-[#830065] hover:text-white rounded-none text-[#830065] border-2 ext-[#830065] px-8 py-3 text-lg font-medium border-[#830065]"
               style={{
                 boxShadow: '4px 4px 0px rgba(0, 0, 0, 1)'
               }}
             >
               <Link href={`/${lang}/details`}>
-                SCHEDULE
+                {dict.nav.details}
               </Link>
             </Button>
           </div>
 
           {/* Countdown Container */}
-          <div className="p-8 bg-white text-center border-b-2 border-purple-800 md:border-b-4">
-            <div className="flex justify-center space-x-8 mb-6">
+          <div className="p-8 bg-white text-center border-b-2 border-[#830065] md:border-b-4">
+            {/* <div className="flex justify-center space-x-8 mb-6">
               <div className="text-center">
-                <div className="text-4xl font-bold text-purple-800">0</div>
-                <div className="text-sm text-purple-700 font-medium">DAYS</div>
+                <div className="text-4xl font-bold text-[#830065]">0</div>
+                <div className="text-sm text-[#830065] font-medium">DAYS</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-purple-800">0</div>
-                <div className="text-sm text-purple-700 font-medium">HOURS</div>
+                <div className="text-4xl font-bold text-[#830065]">0</div>
+                <div className="text-sm text-[#830065] font-medium">HOURS</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-purple-800">0</div>
-                <div className="text-sm text-purple-700 font-medium">MINUTES</div>
+                <div className="text-4xl font-bold text-[#830065]">0</div>
+                <div className="text-sm text-[#830065] font-medium">MINUTES</div>
               </div>
             </div>
-            <h3 className="text-2xl md:text-3xl font-bold text-purple-800">
-              Until the big day!
-            </h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-[#830065]">
+              {dict.home.untilCountdown}
+            </h3> */}
+            <CountdownTimer targetDate="2025-09-03T22:00:00" dict={dict}/>
           </div>
 
           {/* RSVP Container */}
-          <div className="p-8 bg-white text-center border-b-2 border-purple-800 md:border-b-4 md:col-span-2">
-            <h2 className="text-4xl md:text-5xl font-bold text-purple-800 mb-6">
-              ARE YOU COMING?
+          <div className="p-8 bg-white text-center border-b-2 border-[#830065] md:border-b-4 md:col-span-2">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#830065] mb-6">
+              {dict.home.areYouComing}
             </h2>
             <Button 
               asChild 
-              className="hover:bg-purple-800 hover:text-white rounded-none text-purple-800 px-12 py-4 text-xl font-medium border-2 border-purple-800"
+              className="hover:bg-[#830065] hover:text-white rounded-none text-[#830065] px-12 py-4 text-xl font-medium border-2 border-[#830065]"
               style={{
                 boxShadow: '4px 4px 0px rgba(0, 0, 0, 1)'
               }}
             >
               <Link href={`/${lang}/rsvp`}>
-                RSVP
+                {dict.nav.rsvp}
               </Link>
             </Button>
           </div>
 
           {/* Wedding Party Container
           <div className="p-8 bg-white text-center md:col-span-2">
-            <h2 className="text-4xl md:text-5xl font-bold text-purple-800">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#830065]">
               OUR WEDDING PARTY
             </h2>
           </div> */}

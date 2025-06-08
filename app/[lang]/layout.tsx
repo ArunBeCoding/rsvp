@@ -67,15 +67,15 @@ export default async function LangLayout({
   return (
     <>
       {/* Header with Title */}
-      <header className="bg-white w-[70%] mx-auto text-center py-8 border-b-4 border-purple-800">
-        <h1 className="text-4xl md:text-6xl font-bold text-purple-800 mb-2">
+      <header className="bg-white w-[70%] mx-auto text-center py-8 border-b-4 border-[#830065]">
+        <h1 className="text-4xl md:text-6xl font-bold text-[#830065] mb-2">
           {dict.home.title}
         </h1>
-        <p className="text-lg text-purple-700">{dict.home.dateValue}</p>
+        <p className="text-lg text-[#830065]">{dict.home.dateValue}</p>
       </header>
 
       {/* Navigation Bar */}
-      <nav className="bg-white w-[70%] mx-auto border-b-4 border-purple-800">
+      <nav className="bg-white w-[70%] mx-auto border-b-4 border-[#830065]">
         <div className="mx-auto">
           <div className="flex items-center justify-center py-4">
             
@@ -83,19 +83,19 @@ export default async function LangLayout({
             <div className="flex items-center space-x-8">
               <Link 
                 href={`/${lang}`} 
-                className="text-purple-800 hover:text-purple-600 transition-colors font-semibold text-lg uppercase tracking-wide"
+                className="text-[#830065] hover:text-[#830065] transition-colors font-semibold text-lg uppercase tracking-wide"
               >
                 {dict.nav.home}
               </Link>
               <Link 
                 href={`/${lang}/details`} 
-                className="text-purple-800 hover:text-purple-600 transition-colors font-semibold text-lg uppercase tracking-wide"
+                className="text-[#830065] hover:text-[#830065] transition-colors font-semibold text-lg uppercase tracking-wide"
               >
                 {dict.nav.details}
               </Link>
               <Link 
                 href={`/${lang}/rsvp`} 
-                className="text-purple-800 hover:text-purple-600 transition-colors font-semibold text-lg uppercase tracking-wide"
+                className="text-[#830065] hover:text-[#830065] transition-colors font-semibold text-lg uppercase tracking-wide"
               >
                 {dict.nav.rsvp}
               </Link>

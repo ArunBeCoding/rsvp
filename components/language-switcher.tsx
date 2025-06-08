@@ -27,7 +27,7 @@ export function LanguageSwitcher({ currentLang }: { currentLang: string }) {
     <Button 
       variant="outline" 
       size="sm" 
-      className="gap-2 rounded-full w-10 h-10 p-0 flex items-center justify-center bg-purple-800 border-purple-800 text-white"
+      className="gap-2 rounded-full w-10 h-10 p-0 flex items-center justify-center bg-[#830065] border-[#830065] text-white"
       onClick={() => {
         // Switch to the opposite language
         const newLang = currentLang === 'en' ? 'ta' : 'en';

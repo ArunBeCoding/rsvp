@@ -15,7 +15,14 @@
     "venueValue": "Garden Manor",
     "description": "Good morning babe! I love you and you are an amazing person!",
     "rsvpButton": "RSVP Now",
-    "detailsButton": "Event Details"
+    "detailsButton": "Event Details",
+    "missthis": "YOU WON'T WANT TO MISS THIS!",
+    "untilCountdown": "Until the big day!",
+    "areYouComing": "ARE YOU COMING?",
+    "days": "DAYS",
+    "hours": "HOURS",
+    "mins": "MINS",
+    "sec": "SECS"
   },
   "rsvp": {
     "title": "RSVP",

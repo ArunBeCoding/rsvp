@@ -57,7 +57,7 @@ export default async function AdminPage({
 }: {
   params: { lang: "en" | "ta" }
 }) {
-  const { lang } = params
+  const { lang } = await params
   const stats = await getRSVPStats()
   const rsvps = await getAllRSVPs()
 
