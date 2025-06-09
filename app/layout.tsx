@@ -1,24 +1,46 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Lexend } from "next/font/google"
 import "./globals.css"
+import { getDictionary } from "./[lang]/dictionaries"
+import { Arima } from 'next/font/google'
 
-const inter = Inter({ subsets: ["latin"] })
+
+const arima = Arima({
+  subsets: ['latin', 'tamil'],
+  weight: ['200'],
+  display: 'swap',
+})
+
+
+const inter = Lexend({
+   subsets: ["latin"],
+   weight: ['200'] 
+  })
 
 export const metadata: Metadata = {
-  title: "Sarah & Michael's Wedding",
-  description: "Join us for our special day - June 15, 2024",
+  title: "Meena's & Arun's Wedding",
+  description: "Join us for our special day - Sept 4th, 2024",
     generator: 'v0.dev'
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode,
+  params: Promise<{ lang: "en" | "ta" }>
 }) {
+  const { lang } = await params
+  const dict = await getDictionary(lang)
+  const fontClass = lang === 'ta' ? arima.className : inter.className
+
   return (
     <html>
-      <body className={inter.className}>{children}</body>
+      <body className={fontClass}>{children}</body>
     </html>
   )
 }
+
+
+export { arima, inter }

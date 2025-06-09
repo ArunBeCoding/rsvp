@@ -34,6 +34,9 @@ export function LanguageSwitcher({ currentLang }: { currentLang: string }) {
         switchLanguage(newLang);
       }}
     >
+      <span className="sm:hidden">
+        {currentLang === 'en' ? 'த' : 'en'}
+      </span>
       <span className="hidden sm:inline">
         {currentLang === 'en' ? 'தமிழ்' : 'en'}
       </span>

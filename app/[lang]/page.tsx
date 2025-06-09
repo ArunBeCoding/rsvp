@@ -74,6 +74,8 @@ import Link from "next/link"
 import { getDictionary } from "./dictionaries"
 import { Great_Vibes } from 'next/font/google'
 import CountdownTimer from "@/components/countdown"
+import { arima } from '@/app/layout'
+import { inter } from "@/app/layout"
 
 const elegantFont = Great_Vibes({subsets: ['latin'],weight: '400'})
 
@@ -84,37 +86,32 @@ export default async function HomePage({
 }) {
   const { lang } = await params
   const dict = await getDictionary(lang)
+  const fontClass = lang === 'ta' ? arima.className : inter.className
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className={`min-h-screen bg-white ${fontClass}`}>
       <main className="container mx-auto px-4 pb-16">
-        {/* Header Section */}
-        {/* <div className="text-center mb-12">
-          <h1 className="text-6xl md:text-8xl font-bold text-[#830065] mb-4">
-            {dict.home.title}
-          </h1>
-          <p className="text-xl text-[#830065]">June 15, 2024</p>
-        </div> */}
-
         {/* Main Grid with Shared Borders */}
         <div className="w-[70%] mx-auto border-[#830065] grid grid-cols-1 md:grid-cols-2">
           {/* Large Initials Container */}
-          <div className="p-12 flex items-center justify-center bg-white border-r-2 border-b-2 border-[#830065] md:border-r-4 md:border-b-4">
-            <div className="text-center">
-              <div className={`text-8xl md:text-9xl mr-40 font-bold text-[#830065] leading-none ${elegantFont.className}`}>
-                M
-              </div>
-              <div className={`text-6xl md:text-7xl font-bold text-[#830065] leading-none ${elegantFont.className}`}>
-                &
-              </div>
-              <div className={`text-8xl md:text-9xl ml-40 font-bold text-[#830065] leading-none ${elegantFont.className}`}>
-                A
+          <div className="p-12 flex items-center justify-center bg-white md:border-r-8 border-b-8 border-[#830065] md:border-b-8">
+            <div className="p-10 border-8 border-[#830065]">
+              <div className="text-center">
+                <div className={`text-5xl md:text-7xl mr-40 font-bold text-[#830065] leading-none ${elegantFont.className}`}>
+                  M
+                </div>
+                <div className={`text-5xl md:text-7xl font-bold text-[#830065] leading-none ${elegantFont.className}`}>
+                  &
+                </div>
+                <div className={`text-5xl md:text-7xl ml-40 font-bold text-[#830065] leading-none ${elegantFont.className}`}>
+                  A
+                </div>
               </div>
             </div>
           </div>
 
           {/* Photo Placeholder Container */}
-          <div className="p-8 bg-white border-b-2 border-[#830065] md:border-b-4">
+          <div className="p-8 bg-white border-b-2 border-[#830065] md:border-b-8">
             <div className="aspect-square bg-gray-100 rounded-lg flex items-center justify-center">
               <span className="text-[#830065] text-lg font-medium">
                 {dict.home.photoPlaceholder || "Wedding Photo"}
@@ -123,7 +120,7 @@ export default async function HomePage({
           </div>
 
           {/* Call to Action Container */}
-          <div className="p-8 bg-white text-center border-r-2 border-b-2 border-[#830065] md:border-r-4 md:border-b-4">
+          <div className="p-8 bg-white text-center border-b-8 border-[#830065] md:border-r-8 md:border-b-8">
             <h2 className="text-3xl md:text-4xl font-bold text-[#830065] mb-6 leading-tight">
               {dict.home.missthis}
             </h2>
@@ -141,7 +138,7 @@ export default async function HomePage({
           </div>
 
           {/* Countdown Container */}
-          <div className="p-8 bg-white text-center border-b-2 border-[#830065] md:border-b-4">
+          <div className="p-8 bg-white text-center border-b-8 border-[#830065] md:border-b-8">
             {/* <div className="flex justify-center space-x-8 mb-6">
               <div className="text-center">
                 <div className="text-4xl font-bold text-[#830065]">0</div>
@@ -163,7 +160,7 @@ export default async function HomePage({
           </div>
 
           {/* RSVP Container */}
-          <div className="p-8 bg-white text-center border-b-2 border-[#830065] md:border-b-4 md:col-span-2">
+          <div className="p-8 bg-white text-center border-b-8 border-[#830065] md:border-b-8 md:col-span-2">
             <h2 className="text-4xl md:text-5xl font-bold text-[#830065] mb-6">
               {dict.home.areYouComing}
             </h2>
@@ -179,13 +176,6 @@ export default async function HomePage({
               </Link>
             </Button>
           </div>
-
-          {/* Wedding Party Container
-          <div className="p-8 bg-white text-center md:col-span-2">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#830065]">
-              OUR WEDDING PARTY
-            </h2>
-          </div> */}
 
         </div>
       </main>
