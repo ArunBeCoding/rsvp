@@ -27,7 +27,7 @@ export default async function DetailsPage({
         <div className="w-[70%] mx-auto border-4 border-[#830065] grid grid-cols-1 md:grid-cols-2">
           
           {/* Ceremony & Reception */}
-          <div className="p-8 bg-white border-r-2 border-b-2 border-[#830065] md:border-r-4 md:border-b-4 md:col-span-2">
+          <div className="p-8 bg-white border-b-2 border-[#830065] md:border-b-4 md:col-span-2">
             <div className="flex items-center gap-3 mb-6">
               <MapPin className="h-6 w-6 text-[#830065]" />
               <h2 className="text-3xl font-bold text-[#830065]">{dict.details.ceremony}</h2>
