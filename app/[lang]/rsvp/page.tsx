@@ -368,7 +368,7 @@ export default function RSVPPage() {
             <button
               type="submit"
               disabled={isPending}
-              className="w-full rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm h-12 px-5 disabled:opacity-50"
+              className="w-full rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#830065] hover:text-white font-medium text-sm h-12 px-5 disabled:opacity-50"
             >
               {isPending ? (
                 <>
