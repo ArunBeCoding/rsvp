@@ -46,7 +46,7 @@ type Dictionary = {
 const dictionaries: Record<string, Dictionary> = {
   en: {
     rsvp: {
-      title: "RSVP",
+      title: "Wedding RSVP",
       subtitle: "Please respond by July 1st, 2025",
       cardTitle: "We Hope You Can Join Us!",
       cardDescription: "Please fill out the form below to let us know if you'll be attending our special day.",
@@ -77,7 +77,7 @@ const dictionaries: Record<string, Dictionary> = {
   },
   ta: {
     rsvp: {
-      title: "பதில் அளிக்கவும்",
+      title: "திருமணத்திற்கு பதில் அளிக்கவும்",
       subtitle: "ஜூலை 1, 2025 க்குள் பதில் அளிக்கவும்",
       cardTitle: "நீங்கள் எங்களுடன் சேர முடியும் என்று நம்புகிறோம்!",
       cardDescription: "எங்கள் சிறப்பு நாளில் நீங்கள் கலந்து கொள்வீர்களா என்பதை எங்களுக்குத் தெரியப்படுத்த கீழே உள்ள படிவத்தை நிரப்பவும்.",

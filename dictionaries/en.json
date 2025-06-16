@@ -59,10 +59,10 @@
     "venueAddress": "Nachiapuram, Tamilnadu, India",
     "ceremonyTime": "Wedding: 10:00 AM",
     "receptionTime": "Reception: 6:00 PM - 11:00 PM",
-    "venueDescription": "Our ceremony will take place in the beautiful rose garden, followed by cocktail hour and dinner reception in the grand ballroom. The venue features stunning views and elegant architecture perfect for our celebration.",
+    "venueDescription": "Our wedding ceremony will be held over three joyous days at our ancestral home, surrounded by timeless architecture and cherished family traditions. From heartfelt rituals to lively celebrations, we can’t wait to share this meaningful experience with you.",
     "dressCode": "Dress Code",
     "dressCodeType": "Traditional",
-    "dressCodeDescription": "Think wedding guest chic! Ladies can wear cocktail dresses or dressy separates. Gentlemen can wear dress shirts with slacks and optional tie or sport coat. Please avoid white, ivory, or cream colors.",
+    "dressCodeDescription": "Come dressed in your favorite traditional attire—bright colors, rich fabrics, and personal flair are all welcome! There’s no strict dress code, so feel free to express yourself through your look.",
     "schedule": "Schedule of Events",
     "scheduleItems": {
       "arrival": "Guest arrival & seating",
@@ -72,15 +72,15 @@
       "dancing": "First dance & dancing",
       "lastDance": "Last dance"
     },
-    "parking": "Parking & Transportation",
-    "parkingDescription": "Complimentary valet parking will be available at the venue. Uber and Lyft are readily available in the area.",
+    "parking": "Transportation",
+    "parkingDescription": "We can help to book cars from your accomodation to the wedding venue.",
     "accommodations": "Accommodations",
-    "accommodationsDescription": "We have room blocks at nearby hotels. Please mention the \"Smith-Johnson Wedding\" for special rates. Contact us for details.",
-    "dinner": "Dinner",
-    "dinnerDescription": "A plated dinner will be served with vegetarian and gluten-free options available. Please note any dietary restrictions in your RSVP.",
+    "accommodationsDescription": "There are many great options in the vicinity. Please contact us for further information.",
+    "dinner": "Food",
+    "dinnerDescription": "All three meals are provided for each day of the wedding! This will definitely be a highlight!",
     "photography": "Photography",
-    "photographyDescription": "We'll have a professional photographer, but feel free to take photos! Please share them with #SarahAndMichael2024.",
+    "photographyDescription": "We'll have a professional photographer, but feel free to take photos! Please share them with {hashtag yet to be decided}.",
     "questions": "Questions?",
-    "questionsDescription": "If you have any questions, please don't hesitate to reach out to us directly or contact our wedding coordinator, Emily, at emily@gardenmanor.com or (555) 123-4567."
+    "questionsDescription": "If you have any questions, please don't hesitate to reach out to us directly."
   }
 }
