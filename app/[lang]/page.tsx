@@ -5,6 +5,7 @@ import { Great_Vibes } from 'next/font/google'
 import CountdownTimer from "@/components/countdown"
 import { arima } from '@/app/layout'
 import { inter } from "@/app/layout"
+import Image from "next/image";
 
 const elegantFont = Great_Vibes({subsets: ['latin'],weight: '400'})
 
@@ -40,11 +41,18 @@ export default async function HomePage({
           </div>
 
           {/* Photo Placeholder Container */}
-          <div className="p-8 bg-white border-b-8 border-[#830065] md:border-b-8">
+          <div className="bg-white border-b-8 border-[#830065] md:border-b-8">
             <div className="aspect-square bg-gray-100 rounded-lg flex items-center justify-center">
-              <span className="text-[#830065] text-lg font-medium">
+              {/* <span className="text-[#830065] text-lg font-medium">
                 {dict.home.photoPlaceholder || "Wedding Photo"}
-              </span>
+              </span> */}
+              <Image
+                src="/wedding_photo.jpeg"
+                alt={dict.home.photoPlaceholder || "Wedding Photo"}
+                width={500}
+                height={500}
+                priority
+              />
             </div>
           </div>
 
