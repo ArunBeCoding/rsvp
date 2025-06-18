@@ -56,7 +56,7 @@ export default async function DetailsPage({
           </div>
 
           {/* Dress Code */}
-          <div className="p-8 bg-white border-r-2 border-b-2 border-[#830065] md:border-r-4 md:border-b-4">
+          <div className="p-8 bg-white border-b-2 border-[#830065] md:border-r-4 md:border-b-4">
             <h2 className="text-3xl font-bold text-[#830065] mb-6">{dict.details.dressCode}</h2>
             <div className="space-y-4">
               <p className="text-[#830065] font-semibold text-lg">
@@ -73,35 +73,35 @@ export default async function DetailsPage({
               <h2 className="text-3xl font-bold text-[#830065]">{dict.details.schedule}</h2>
             </div>
             <div className="space-y-3">
-              <div className="flex justify-between items-center py-2 border-b-2 border-[#830065]">
-                <span className="font-semibold text-[#830065]">3:30 PM</span>
+              {/* <div className="flex justify-between items-center py-2 border-b-2 border-[#830065]">
+                <span className="font-semibold text-[#830065]">Sept 3, 6:00PM</span>
                 <span className="text-[#830065]">{dict.details.scheduleItems.arrival}</span>
               </div>
               <div className="flex justify-between items-center py-2 border-b-2 border-[#830065]">
-                <span className="font-semibold text-[#830065]">4:00 PM</span>
+                <span className="font-semibold text-[#830065]">Sept 3, 6:00PM</span>
                 <span className="text-[#830065]">{dict.details.scheduleItems.ceremony}</span>
-              </div>
+              </div> */}
               <div className="flex justify-between items-center py-2 border-b-2 border-[#830065]">
-                <span className="font-semibold text-[#830065]">4:30 PM</span>
+                <span className="font-semibold text-[#830065]">Sept 3, 6:00PM</span>
                 <span className="text-[#830065]">{dict.details.scheduleItems.cocktail}</span>
               </div>
               <div className="flex justify-between items-center py-2 border-b-2 border-[#830065]">
-                <span className="font-semibold text-[#830065]">6:00 PM</span>
+                <span className="font-semibold text-[#830065]">Sept 3, 6:00PM</span>
                 <span className="text-[#830065]">{dict.details.scheduleItems.reception}</span>
               </div>
               <div className="flex justify-between items-center py-2 border-b-2 border-[#830065]">
-                <span className="font-semibold text-[#830065]">8:00 PM</span>
+                <span className="font-semibold text-[#830065]">Sept 4, 10:00AM</span>
                 <span className="text-[#830065]">{dict.details.scheduleItems.dancing}</span>
               </div>
               <div className="flex justify-between items-center py-2">
-                <span className="font-semibold text-[#830065]">11:00 PM</span>
+                <span className="font-semibold text-[#830065]">Sept 4, 6:00PM</span>
                 <span className="text-[#830065]">{dict.details.scheduleItems.lastDance}</span>
               </div>
             </div>
           </div>
 
           {/* Parking */}
-          <div className="p-8 bg-white border-r-2 border-b-2 border-[#830065] md:border-r-4 md:border-b-4">
+          <div className="p-8 bg-white border-b-2 border-[#830065] md:border-r-4 md:border-b-4">
             <div className="flex items-center gap-3 mb-6">
               <Car className="h-6 w-6 text-[#830065]" />
               <h2 className="text-3xl font-bold text-[#830065]">{dict.details.parking}</h2>
@@ -119,7 +119,7 @@ export default async function DetailsPage({
           </div>
 
           {/* Dinner */}
-          <div className="p-8 bg-white border-r-2 border-b-2 border-[#830065] md:border-r-4 md:border-b-4">
+          <div className="p-8 bg-white border-b-2 border-[#830065] md:border-r-4 md:border-b-4">
             <div className="flex items-center gap-3 mb-6">
               <Utensils className="h-6 w-6 text-[#830065]" />
               <h2 className="text-3xl font-bold text-[#830065]">{dict.details.dinner}</h2>

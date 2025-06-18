@@ -27,13 +27,13 @@ export default async function HomePage({
           <div className="p-12 flex items-center justify-center bg-white md:border-r-8 border-b-8 border-[#830065] md:border-b-8">
             <div className="p-10 border-8 border-[#830065]">
               <div className="text-center">
-                <div className={`text-5xl md:text-7xl mr-40 font-bold text-[#830065] leading-none ${elegantFont.className}`}>
+                <div className={`text-4xl md:text-7xl mr-40 font-bold text-[#830065] leading-none ${elegantFont.className}`}>
                   M
                 </div>
-                <div className={`text-5xl md:text-7xl font-bold text-[#830065] leading-none ${elegantFont.className}`}>
+                <div className={`text-4xl md:text-7xl font-bold text-[#830065] leading-none ${elegantFont.className}`}>
                   &
                 </div>
-                <div className={`text-5xl md:text-7xl ml-40 font-bold text-[#830065] leading-none ${elegantFont.className}`}>
+                <div className={`text-4xl md:text-7xl ml-40 font-bold text-[#830065] leading-none ${elegantFont.className}`}>
                   A
                 </div>
               </div>
@@ -81,7 +81,7 @@ export default async function HomePage({
 
           {/* RSVP Container */}
           <div className="p-8 bg-white text-center border-b-8 border-[#830065] md:border-b-8 md:col-span-2">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#830065] mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-[#830065] mb-6">
               {dict.home.areYouComing}
             </h2>
             <Button 

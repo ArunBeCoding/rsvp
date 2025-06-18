@@ -61,7 +61,7 @@ function CountdownTimer({ targetDate, dict } : {targetDate : string, dict : any}
           <div className="text-sm text-[#830065] font-medium">{dict.home.sec}</div>
         </div>
       </div>
-      <h3 className="text-2xl md:text-3xl font-bold text-[#830065]">
+      <h3 className="text-3xl md:text-3xl font-bold text-[#830065]">
         {dict?.home?.untilCountdown || 'Until Launch'}
       </h3>
     </div>
