@@ -196,11 +196,13 @@ export default function RSVPPage() {
   return (
 
     <div className={`grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)] text-[#830065] ${fontClass}`}>
+    {/* <div className={`grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] text-[#830065] ${fontClass}`}> */}
+
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start w-full max-w-2xl">
         <div className="text-center text-2xl md:text-4xl pt-4">
           {dict.rsvp.rsvpWelcome}
         </div>
-        <div className="bg-[url('/background.png')] bg-contain bg-center bg-no-repeat min-w-[100%] min-h-[100%] p-32">
+        {/* <div className="bg-[url('/background.png')] bg-contain bg-center bg-no-repeat min-w-[100%] min-h-[100%] p-32">
             <div className="m-16 p-16 bg-[#830065]/[0.2] border-8 border-[#830065]">
               <div className="text-center">
                 <div className={`text-1xl md:text-[28px] font-bold text-[#830065] leading-none border-b-4 border-[#830065] pb-3`}>
@@ -214,7 +216,23 @@ export default function RSVPPage() {
                 </div>
               </div>
             </div>
+        </div> */}
+        <div className="bg-[url('/background.png')] bg-cover bg-center bg-no-repeat w-full min-h-[500px] sm:min-h-[600px] p-4 sm:p-8 md:p-16 lg:p-32 flex items-center justify-center">
+          <div className="m-4 sm:m-8 md:m-16 p-4 sm:p-8 md:p-16 bg-[#830065]/[0.2] border-4 sm:border-8 border-[#830065] w-full max-w-lg">
+            <div className="text-center">
+              <div className={`text-xl sm:text-2xl md:text-[28px] font-bold text-[#830065] leading-none border-b-2 sm:border-b-4 border-[#830065] pb-2 sm:pb-3`}>
+                {dict.rsvp.title}
+              </div>
+              <div className={`text-base sm:text-lg md:text-[18px] font-bold text-[#830065] leading-none pt-2 sm:pt-3 pb-1`}>
+                {dict.rsvp.venue}
+              </div>
+              <div className={`text-base sm:text-lg md:text-[18px] font-bold text-[#830065] leading-none`}>
+                {dict.rsvp.date}
+              </div>
+            </div>
+          </div>
         </div>
+        <div className="p-8">
         <div className="text-center sm:text-left">
           {/* <h1 className="text-4xl font-bold mb-2">{dict.rsvp.title}</h1> */}
           <p className="text-sm text-gray-600">{dict.rsvp.subtitle}</p>
@@ -416,6 +434,7 @@ export default function RSVPPage() {
               )}
             </button>
           </form>
+        </div>
         </div>
       </main>
     </div>
