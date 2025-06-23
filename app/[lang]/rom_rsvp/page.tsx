@@ -75,8 +75,8 @@ const dictionaries: Record<string, Dictionary> = {
       required: "*",
       error: "Error",
       venue: "Singapore",
-      date: "13th Sept 2025",
-      rsvpWelcome: "Hi bestie! you are invited to our registration of marriage!"
+      date: "14th Sept, 12:00pm",
+      rsvpWelcome: "Hi girlies and guys! You are invited to our registration of marriage!"
     },
   },
   ta: {
@@ -108,7 +108,7 @@ const dictionaries: Record<string, Dictionary> = {
       required: "*",
       error: "பிழை",
       venue: "சிங்கப்பூர்",
-      date: "28 ஆவணி 2025",
+      date: "29 ஆவணி, 12:00pm",
       rsvpWelcome: "ஹாய் மச்சான்! எங்கள் திருமணப் பதிவு நிகழ்விற்கு உங்களை அழைக்கிறோம்!"
     },
   },
@@ -183,7 +183,7 @@ export default function RSVPPage() {
 
   if (submitted) {
     return (
-      <div className={`grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] text-[#830065]`}>
+      <div className={`grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] text-[#FFFFFF]`}>
         <main className="flex flex-col gap-8 row-start-2 items-center text-center">
           <Heart className="h-16 w-16 text-red-500 fill-current" />
           <h1 className="text-2xl font-semibold">{dict.rsvp.thankYou}</h1>
@@ -195,38 +195,38 @@ export default function RSVPPage() {
 
   return (
 
-    <div className={`grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)] text-[#830065] ${fontClass}`}>
-    {/* <div className={`grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] text-[#830065] ${fontClass}`}> */}
+    <div className={`grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)] text-[#FFFFFF] ${fontClass}`}>
+    {/* <div className={`grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] text-[#FFFFFF] ${fontClass}`}> */}
 
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start w-full max-w-2xl">
         <div className="text-center text-2xl md:text-4xl pt-4">
           {dict.rsvp.rsvpWelcome}
         </div>
         {/* <div className="bg-[url('/background.png')] bg-contain bg-center bg-no-repeat min-w-[100%] min-h-[100%] p-32">
-            <div className="m-16 p-16 bg-[#830065]/[0.2] border-8 border-[#830065]">
+            <div className="m-16 p-16 bg-[#FFFFFF]/[0.2] border-8 border-[#FFFFFF]">
               <div className="text-center">
-                <div className={`text-1xl md:text-[28px] font-bold text-[#830065] leading-none border-b-4 border-[#830065] pb-3`}>
+                <div className={`text-1xl md:text-[28px] font-bold text-[#FFFFFF] leading-none border-b-4 border-[#FFFFFF] pb-3`}>
                     {dict.rsvp.title}
                 </div>
-                <div className={`text-1xl md:text-[18px] font-bold text-[#830065] leading-none pt-3 pb-1`}>
+                <div className={`text-1xl md:text-[18px] font-bold text-[#FFFFFF] leading-none pt-3 pb-1`}>
                     {dict.rsvp.venue}
                 </div>
-                <div className={`text-1xl md:text-[18px] font-bold text-[#830065] leading-none`}>
+                <div className={`text-1xl md:text-[18px] font-bold text-[#FFFFFF] leading-none`}>
                     {dict.rsvp.date}
                 </div>
               </div>
             </div>
         </div> */}
-        <div className="bg-[url('/background.png')] bg-cover bg-center bg-no-repeat w-full min-h-[500px] sm:min-h-[600px] p-4 sm:p-8 md:p-16 lg:p-32 flex items-center justify-center">
-          <div className="m-4 sm:m-8 md:m-16 p-4 sm:p-8 md:p-16 bg-[#830065]/[0.2] border-4 sm:border-8 border-[#830065] w-full max-w-lg">
+        <div className="bg-[url('/background-3.png')] bg-cover bg-center bg-no-repeat w-full min-h-[500px] sm:min-h-[600px] p-4 sm:p-8 md:p-16 lg:p-32 flex items-center justify-center">
+          <div className="m-4 sm:m-8 md:m-16 p-4 sm:p-8 md:p-16 bg-[#C19894]/[0.5] border-4 sm:border-8 border-[#FFFFFF] w-full max-w-lg">
             <div className="text-center">
-              <div className={`text-xl sm:text-2xl md:text-[28px] font-bold text-[#830065] leading-none border-b-2 sm:border-b-4 border-[#830065] pb-2 sm:pb-3`}>
+              <div className={`text-xl sm:text-2xl md:text-[28px] font-bold text-[#FFFFFF] leading-none border-b-2 sm:border-b-4 border-[#FFFFFF] pb-2 sm:pb-3`}>
                 {dict.rsvp.title}
               </div>
-              <div className={`text-base sm:text-lg md:text-[18px] font-bold text-[#830065] leading-none pt-2 sm:pt-3 pb-1`}>
+              <div className={`text-base sm:text-lg md:text-[18px] font-bold text-[#FFFFFF] leading-none pt-2 sm:pt-3 pb-1`}>
                 {dict.rsvp.venue}
               </div>
-              <div className={`text-base sm:text-lg md:text-[18px] font-bold text-[#830065] leading-none`}>
+              <div className={`text-base sm:text-lg md:text-[18px] font-bold text-[#FFFFFF] leading-none`}>
                 {dict.rsvp.date}
               </div>
             </div>
@@ -422,7 +422,7 @@ export default function RSVPPage() {
             <button
               type="submit"
               disabled={isPending}
-              className="w-full rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#830065] hover:text-white font-medium text-sm h-12 px-5 disabled:opacity-50"
+              className="w-full rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#FFFFFF] hover:text-white font-medium text-sm h-12 px-5 disabled:opacity-50"
             >
               {isPending ? (
                 <>

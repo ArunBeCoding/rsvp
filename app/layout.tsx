@@ -37,7 +37,7 @@ export default async function RootLayout({
 
   return (
     <html>
-      <body className={fontClass} suppressHydrationWarning={true}>{children}</body>
+      <body className={`bg-[#C19894] ${fontClass}`} suppressHydrationWarning={true}>{children}</body>
     </html>
   )
 }

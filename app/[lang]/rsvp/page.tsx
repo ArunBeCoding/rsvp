@@ -177,7 +177,7 @@ export default function RSVPPage() {
 
   if (submitted) {
     return (
-      <div className={`grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] text-[#830065]`}>
+      <div className={`grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] text-[#FFFFFF]`}>
         <main className="flex flex-col gap-8 row-start-2 items-center text-center">
           <Heart className="h-16 w-16 text-red-500 fill-current" />
           <h1 className="text-2xl font-semibold">{dict.rsvp.thankYou}</h1>
@@ -188,7 +188,7 @@ export default function RSVPPage() {
   }
 
   return (
-    <div className={`grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] text-[#830065] ${fontClass}`}>
+    <div className={`grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] text-[#FFFFFF] ${fontClass}`}>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start w-full max-w-2xl">
         <div className="text-center sm:text-left">
           <h1 className="text-4xl font-bold mb-2">{dict.rsvp.title}</h1>
@@ -368,7 +368,7 @@ export default function RSVPPage() {
             <button
               type="submit"
               disabled={isPending}
-              className="w-full rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#830065] hover:text-white font-medium text-sm h-12 px-5 disabled:opacity-50"
+              className="w-full rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#FFFFFF] hover:text-white font-medium text-sm h-12 px-5 disabled:opacity-50"
             >
               {isPending ? (
                 <>

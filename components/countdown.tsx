@@ -42,26 +42,26 @@ function CountdownTimer({ targetDate, dict } : {targetDate : string, dict : any}
   }, [targetDate]);
 
   return (
-    <div className="p-8 bg-white text-center border-[#830065]">
+    <div className="p-8 text-center border-[#FFFFFF]">
       <div className="flex justify-center space-x-8 mb-6">
         <div className="text-center">
-          <div className="text-4xl font-bold text-[#830065]">{timeLeft.days}</div>
-          <div className="text-sm text-[#830065] font-medium">{dict.home.days}</div>
+          <div className="text-4xl font-bold text-[#FFFFFF]">{timeLeft.days}</div>
+          <div className="text-sm text-[#FFFFFF] font-medium">{dict.home.days}</div>
         </div>
         <div className="text-center">
-          <div className="text-4xl font-bold text-[#830065]">{timeLeft.hours}</div>
-          <div className="text-sm text-[#830065] font-medium">{dict.home.hours}</div>
+          <div className="text-4xl font-bold text-[#FFFFFF]">{timeLeft.hours}</div>
+          <div className="text-sm text-[#FFFFFF] font-medium">{dict.home.hours}</div>
         </div>
         <div className="text-center">
-          <div className="text-4xl font-bold text-[#830065]">{timeLeft.minutes}</div>
-          <div className="text-sm text-[#830065] font-medium">{dict.home.mins}</div>
+          <div className="text-4xl font-bold text-[#FFFFFF]">{timeLeft.minutes}</div>
+          <div className="text-sm text-[#FFFFFF] font-medium">{dict.home.mins}</div>
         </div>
         <div className="text-center">
-          <div className="text-4xl font-bold text-[#830065]">{timeLeft.seconds}</div>
-          <div className="text-sm text-[#830065] font-medium">{dict.home.sec}</div>
+          <div className="text-4xl font-bold text-[#FFFFFF]">{timeLeft.seconds}</div>
+          <div className="text-sm text-[#FFFFFF] font-medium">{dict.home.sec}</div>
         </div>
       </div>
-      <h3 className="text-3xl md:text-3xl font-bold text-[#830065]">
+      <h3 className="text-3xl md:text-3xl font-bold text-[#FFFFFF]">
         {dict?.home?.untilCountdown || 'Until Launch'}
       </h3>
     </div>
@@ -74,26 +74,26 @@ import dynamic from 'next/dynamic';
 const DynamicCountdown = dynamic(() => Promise.resolve(CountdownTimer), {
   ssr: false,
   loading: () => (
-    <div className="p-8 bg-white text-center border-[#830065]">
+    <div className="p-8 text-center border-[#FFFFFF]">
       <div className="flex justify-center space-x-8 mb-6">
         <div className="text-center">
-          <div className="text-4xl font-bold text-[#830065]">0</div>
-          <div className="text-sm text-[#830065] font-medium">DAYS</div>
+          <div className="text-4xl font-bold text-[#FFFFFF]">0</div>
+          <div className="text-sm text-[#FFFFFF] font-medium">DAYS</div>
         </div>
         <div className="text-center">
-          <div className="text-4xl font-bold text-[#830065]">0</div>
-          <div className="text-sm text-[#830065] font-medium">HOURS</div>
+          <div className="text-4xl font-bold text-[#FFFFFF]">0</div>
+          <div className="text-sm text-[#FFFFFF] font-medium">HOURS</div>
         </div>
         <div className="text-center">
-          <div className="text-4xl font-bold text-[#830065]">0</div>
-          <div className="text-sm text-[#830065] font-medium">MINUTES</div>
+          <div className="text-4xl font-bold text-[#FFFFFF]">0</div>
+          <div className="text-sm text-[#FFFFFF] font-medium">MINUTES</div>
         </div>
         <div className="text-center">
-          <div className="text-4xl font-bold text-[#830065]">0</div>
-          <div className="text-sm text-[#830065] font-medium">SECONDS</div>
+          <div className="text-4xl font-bold text-[#FFFFFF]">0</div>
+          <div className="text-sm text-[#FFFFFF] font-medium">SECONDS</div>
         </div>
       </div>
-      <h3 className="text-2xl md:text-3xl font-bold text-[#830065]">
+      <h3 className="text-2xl md:text-3xl font-bold text-[#FFFFFF]">
         Loading...
       </h3>
     </div>
