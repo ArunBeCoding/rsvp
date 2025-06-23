@@ -20,7 +20,7 @@ const inter = Lexend({
 
 export const metadata: Metadata = {
   title: "Meena's & Arun's Wedding",
-  description: "Join us for our special day - Sept 4th, 2024",
+  description: "Join us for our special day - Sept 4th, 2025",
     generator: 'v0.dev'
 }
 
