@@ -48,19 +48,19 @@ export default async function LangLayout({
             <div className="flex items-center space-x-8">
               <Link 
                 href={`/${lang}`} 
-                className="text-[#FFFFFF] hover:text-[#a3d5ff] transition-colors font-semibold text-lg uppercase tracking-wide"
+                className="text-[#FFFFFF] hover:text-[#A98083] transition-colors font-semibold text-lg uppercase tracking-wide"
               >
                 {dict.nav.home}
               </Link>
               <Link 
                 href={`/${lang}/details`} 
-                className="text-[#FFFFFF] hover:text-[#a3d5ff] transition-colors font-semibold text-lg uppercase tracking-wide"
+                className="text-[#FFFFFF] hover:text-[#A98083] transition-colors font-semibold text-lg uppercase tracking-wide"
               >
                 {dict.nav.details}
               </Link>
               <Link 
                 href={`/${lang}/rsvp`} 
-                className="text-[#FFFFFF] hover:text-[#a3d5ff] transition-colors font-semibold text-lg uppercase tracking-wide"
+                className="text-[#FFFFFF] hover:text-[#A98083] transition-colors font-semibold text-lg uppercase tracking-wide"
               >
                 {dict.nav.rsvp}
               </Link>
