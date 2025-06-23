@@ -259,7 +259,7 @@ export default function RSVPPage() {
                   disabled={isPending}
                   value={formData.firstName}
                   onChange={(e) => handleInputChange("firstName", e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
+                  className="text-[#C19894] w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
                 />
               </div>
               <div>
@@ -272,7 +272,7 @@ export default function RSVPPage() {
                   disabled={isPending}
                   value={formData.lastName}
                   onChange={(e) => handleInputChange("lastName", e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
+                  className="text-[#C19894] w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
                 />
               </div>
             </div>
@@ -288,7 +288,7 @@ export default function RSVPPage() {
                   disabled={isPending}
                   value={formData.email}
                   onChange={(e) => handleInputChange("email", e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
+                  className="text-[#C19894] w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
                 />
               </div>
               {/* <div>
@@ -354,11 +354,10 @@ export default function RSVPPage() {
                     <option value="4">4 {dict.rsvp.plus_oneOptions}</option>
                   </select> */}
                   <input
-                    type="radio"
+                    type="checkbox"
                     name="plus_one"
-                    value="no"
-                    checked={formData.plus_one === "no"}
-                    onChange={(e) => handleInputChange("plus_one", e.target.value)}
+                    checked={formData.plus_one === "yes"}
+                    onChange={(e) => handleInputChange("plus_one", e.target.checked ? "yes" : "no")}
                     disabled={isPending}
                     className="mr-2"
                   />
@@ -373,7 +372,7 @@ export default function RSVPPage() {
                     value={formData.dietaryRestrictions}
                     onChange={(e) => handleInputChange("dietaryRestrictions", e.target.value)}
                     rows={3}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
+                    className="text-[#C19894] w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
                   />
                 </div>
 
@@ -419,7 +418,7 @@ export default function RSVPPage() {
             <button
               type="submit"
               disabled={isPending}
-              className="w-full rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#FFFFFF] hover:text-white font-medium text-sm h-12 px-5 disabled:opacity-50"
+              className="w-full rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#FFFFFF] hover:text-[#C19894] font-medium text-sm h-12 px-5 disabled:opacity-50"
             >
               {isPending ? (
                 <>

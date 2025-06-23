@@ -219,7 +219,7 @@ export default function RSVPPage() {
                   disabled={isPending}
                   value={formData.firstName}
                   onChange={(e) => handleInputChange("firstName", e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
+                  className="text-[#C19894] w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
                 />
               </div>
               <div>
@@ -232,7 +232,7 @@ export default function RSVPPage() {
                   disabled={isPending}
                   value={formData.lastName}
                   onChange={(e) => handleInputChange("lastName", e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
+                  className="text-[#C19894] w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
                 />
               </div>
             </div>
@@ -248,7 +248,7 @@ export default function RSVPPage() {
                   disabled={isPending}
                   value={formData.email}
                   onChange={(e) => handleInputChange("email", e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
+                  className="text-[#C19894] w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
                 />
               </div>
               <div>
@@ -258,7 +258,7 @@ export default function RSVPPage() {
                   disabled={isPending}
                   value={formData.phone}
                   onChange={(e) => handleInputChange("phone", e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
+                  className="text-[#C19894] w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
                 />
               </div>
             </div>
@@ -305,7 +305,7 @@ export default function RSVPPage() {
                     value={formData.guestCount}
                     onChange={(e) => handleInputChange("guestCount", e.target.value)}
                     disabled={isPending}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
+                    className="text-[#C19894] w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
                   >
                     <option value="1">1 {dict.rsvp.guestCountOption}</option>
                     <option value="2">2 {dict.rsvp.guestCountOptions}</option>
@@ -322,7 +322,7 @@ export default function RSVPPage() {
                     value={formData.dietaryRestrictions}
                     onChange={(e) => handleInputChange("dietaryRestrictions", e.target.value)}
                     rows={3}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
+                    className="text-[#C19894] w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
                   />
                 </div>
 
@@ -361,7 +361,7 @@ export default function RSVPPage() {
                 value={formData.message}
                 onChange={(e) => handleInputChange("message", e.target.value)}
                 rows={3}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
+                className="text-[#C19894] w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
               />
             </div>
 
