@@ -155,7 +155,7 @@ export default function RSVPPage() {
     const rsvpData: RomRSVPFormData = {
       ...formData,
       attendance: formData.attendance as "yes" | "no",
-      plus_one: formData.plus_one as "yes" | "no",
+      plus_one: formData.plus_one === "yes" ? "yes" : "no",
       language: lang,
     }
 
