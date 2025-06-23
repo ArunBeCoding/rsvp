@@ -137,7 +137,6 @@ export default function RSVPPage() {
     lastName: "",
     email: "",
     attendance: "",
-    plus_one: "",
     dietaryRestrictions: "",
     songRequest: "",
     accommodations: false,
@@ -155,7 +154,6 @@ export default function RSVPPage() {
     const rsvpData: RomRSVPFormData = {
       ...formData,
       attendance: formData.attendance as "yes" | "no",
-      plus_one: formData.plus_one as "yes" | "no",
       language: lang,
     }
 

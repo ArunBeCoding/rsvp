@@ -10,7 +10,6 @@ export interface RomRSVPFormData {
   lastName: string
   email: string
   attendance: "yes" | "no"
-  plus_one: "yes" | "no"
   dietaryRestrictions: string
   language: string
 }
