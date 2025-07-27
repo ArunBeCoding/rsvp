@@ -75,7 +75,7 @@ const dictionaries: Record<string, Dictionary> = {
       required: "*",
       error: "Error",
       venue: "Singapore",
-      date: "14th Sept, 12:00pm",
+      date: "14th Sept, 10:00am",
       rsvpWelcome: "Hi girlies and guys! You are invited to our registration of marriage!"
     },
   },
@@ -108,7 +108,7 @@ const dictionaries: Record<string, Dictionary> = {
       required: "*",
       error: "பிழை",
       venue: "சிங்கப்பூர்",
-      date: "29 ஆவணி, 12:00pm",
+      date: "29 ஆவணி, 10:00am",
       rsvpWelcome: "ஹாய் மச்சான்! எங்கள் திருமணப் பதிவு நிகழ்விற்கு உங்களை அழைக்கிறோம்!"
     },
   },
@@ -233,7 +233,7 @@ export default function RSVPPage() {
         <div className="p-8">
         <div className="text-center sm:text-left">
           {/* <h1 className="text-4xl font-bold mb-2">{dict.rsvp.title}</h1> */}
-          <p className="text-sm text-gray-600">{dict.rsvp.subtitle}</p>
+          {/* <p className="text-sm text-gray-600">{dict.rsvp.subtitle}</p> */}
         </div>
 
         <div className="w-full">
